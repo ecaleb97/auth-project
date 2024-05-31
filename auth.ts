@@ -1,11 +1,11 @@
-import NextAuth, { type DefaultSession } from "next-auth"
 import authConfig from "@/auth.config"
-import { PrismaAdapter } from "@auth/prisma-adapter"
-import { db } from "@/lib/db"
-import { getUserById } from "@/data/user"
-import { UserRole } from "@prisma/client"
-import { getTwoFactorConfirmationByUserId } from "@/data/two-factor-confirmation"
 import { getAccountByUserId } from "@/data/account"
+import { getTwoFactorConfirmationByUserId } from "@/data/two-factor-confirmation"
+import { getUserById } from "@/data/user"
+import { db } from "@/lib/db"
+import { PrismaAdapter } from "@auth/prisma-adapter"
+import { UserRole } from "@prisma/client"
+import NextAuth, { type DefaultSession } from "next-auth"
 
 /* type ExtendedUser = DefaultSession["user"] & {
   role: UserRole
